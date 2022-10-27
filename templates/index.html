@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Next Day Function</h1>
+    <form>
+        <input type="number" name="day" id="day">
+        <input type="number" name="month" id="month">
+        <input type="number" name="year" id="year">
+        <button type="submit">Next Day!</button>
+    </form>
+    {% if answer  %}
+    <h2>{{ answer }}</h2>
+    {% endif %}
+    </div>
+    
+</body>
+</html>
