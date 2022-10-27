@@ -17,7 +17,7 @@ def index():
             date += timedelta(days=1)
             res = date.strftime("%d %B %Y")
     except Exception as e:
-        res = e
+        res = "Something went wrong... Check your input"
     
     if date_str == "//":
         res = None
