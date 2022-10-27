@@ -10,32 +10,32 @@ body {
 }
 
 .container {
-    padding: 4em;
+    padding: 2em 4em;
 }
 
 form {
     display: flex;
     flex-direction: column;
     color: #c0392b;
-    padding: 1em;
-    border: 1px solid #c0392b;
+    padding: 2em;
+    border: 3px solid #c0392b;
     margin-bottom: 2em;
+    border-radius: 20px;
 }
 
 input {
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: .2em .5em;
     font-family: var(--font-main);
-    color: #c0392b;
+    color: #16a085;
     background-color: #fff;
     margin-bottom: 1em;
-    width: 30%;
     outline: none;
     border: none;
 }
 
 label {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 1em;
 }
 
@@ -50,6 +50,8 @@ button {
     color: #e74c3c;
     font-family: var(--font-main);
     font-weight: 700;
+    border-radius: 20px;
+    margin-top: 2em;
 }
 
 button:hover {
@@ -65,9 +67,11 @@ h1 {
 h3 {
     font-size: 3rem;
     color: #1abc9c;
+    margin: 0;
 }
 
 h2 {
     font-size: 4rem;
     color: #16a085;
+    margin: 0;
 }
