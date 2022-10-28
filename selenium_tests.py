@@ -74,30 +74,25 @@ def test_suite(driver, url):
     print("non-leap-year-case:", ("28", "2", "2022"), "01 March 2022" in driver.page_source)
 
 
+def run_for_both_versions(driver):
+    url_v1 = "https://next-day.herokuapp.com"
+    input("please press enter to start v1 tests")
+    test_suite(driver, url_v1)
 
+    input("please press enter to continue to v2 tests")
+
+    url_v2 = "https://next-day.herokuapp.com/v2"
+    test_suite(driver, url_v2)
+
+    input("please press enter to close")
+
+
+input("please press enter to start chrome tests")
 driver = webdriver.Chrome()
-url_v1 = "https://next-day.herokuapp.com"
-input("please press enter to start v1 tests")
-test_suite(driver, url_v1)
-
-input("please press enter to continue to v2 tests")
-
-url_v2 = "https://next-day.herokuapp.com/v2"
-test_suite(driver, url_v2)
-
-input("please press enter to close")
+run_for_both_versions(driver)
 driver.close()
 
 input("please press enter to start firefox tests")
 driver = webdriver.Firefox()
-url_v1 = "https://next-day.herokuapp.com"
-input("please press enter to start v1 tests")
-test_suite(driver, url_v1)
-
-input("please press enter to continue to v2 tests")
-
-url_v2 = "https://next-day.herokuapp.com/v2"
-test_suite(driver, url_v2)
-
-input("please press enter to close")
+run_for_both_versions(driver)
 driver.close()
